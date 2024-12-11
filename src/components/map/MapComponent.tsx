@@ -22,22 +22,23 @@ const MapComponent: React.FC = () => {
   ];
 
   return (
-    <MapContainer
-      className="rounded"
-      center={[25.108445, 48.518175]} // Centered at Qatar
-      zoom={6}
-      style={{ height: "400px", width: "100%", borderRadius: "10px" }}
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      {locations.map((location, index) => (
-        <Marker key={index} position={location.position}>
-          <Popup>{location.name}</Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+    <div className="relative overflow-hidden">
+      <MapContainer
+        className="rounded h-80 md:h-96 w-full z-0"
+        center={[25.108445, 48.518175]} // Centered at Qatar
+        zoom={6}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        {locations.map((location, index) => (
+          <Marker key={index} position={location.position}>
+            <Popup>{location.name}</Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+    </div>
   );
 };
 

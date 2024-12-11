@@ -20,12 +20,12 @@ export default function AboutUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-12"
+            className="text-center mb-6 sm:mb-8 md:mb-12"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
               About Dates Doha
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="sm:text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">
               A leading contracting and trading company in Qatar, delivering
               excellence in interior contracting, MeP contracting, and trading.
             </p>
@@ -46,7 +46,7 @@ export default function AboutUs() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-4">
+                  <p className="sm:text-sm text-gray-600 mb-4">
                     Dates Doha Contracting WLL has built a reputation for
                     exceeding client expectations in every project we undertake.
                     Our commitment to excellence and innovation drives us to

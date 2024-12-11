@@ -155,11 +155,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-grow">{children}</main>
       <footer className="bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] gap-11">
+          <div className="grid grid-cols-2 md:grid-cols-[1fr_1.5fr_1fr] gap-11">
             <div className="space-y-4">
               <div>
                 <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-                <ul className="flex space-x-4">
+                <ul className="space-y-4 md:flex md:space-x-4">
                   {navItems.map((item) => (
                     <li key={item.name}>
                       <a
