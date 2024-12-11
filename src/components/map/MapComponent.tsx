@@ -1,6 +1,18 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // Include Leaflet's CSS
+import L from "leaflet";
+
+// Configure marker icons to use external URLs
+const customMarkerIcon = L.icon({
+  iconRetinaUrl:
+    "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",
+  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+  iconSize: [25, 41], // Size of the icon
+  iconAnchor: [12, 41], // Anchor point
+});
+L.Marker.prototype.options.icon = customMarkerIcon;
 
 const MapComponent: React.FC = () => {
   const locations: { name: string; position: [number, number] }[] = [
