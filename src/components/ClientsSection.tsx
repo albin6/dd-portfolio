@@ -6,17 +6,21 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const clients = [
-  { name: "Qatar Armed Forces", logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898907/banner-xyz_obylp9.jpg" },
+  {
+    name: "Qatar Armed Forces",
+    logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898891/QAF-client_nqn4ef.jpg",
+  },
   {
     name: "Qatar Volleyball Federation (QVA)",
     logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898891/QVA-client_zk8bqr.jpg",
   },
-  { name: "Mannai Corporation", logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898890/Mannai-client_hypehd.jpg" },
+  {
+    name: "Mannai Corporation",
+    logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898890/Mannai-client_hypehd.jpg",
+  },
   {
     name: "National Car Company",
     logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898891/National-Cars-Company_zgd0hh.jpg",
@@ -29,7 +33,10 @@ const clients = [
     name: "One Thousand walls WLL",
     logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898891/One-Thousand-Wall-Client_nsqgui.jpg",
   },
-  { name: "Hotpack WLL", logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898889/Hot-Pack-Client_zgn9wy.png" },
+  {
+    name: "Hotpack WLL",
+    logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898889/Hot-Pack-Client_zgn9wy.png",
+  },
   {
     name: "Flowtech Hydraulic Trading",
     logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898890/Flow-Tech-Client_ipbcmn.jpg",
@@ -59,33 +66,39 @@ export function ClientsSection() {
           className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-5xl mx-auto"
         >
           <CarouselContent>
-            {clients.map((client, index) => (
-              <CarouselItem
-                key={client.name}
-                className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6"
-              >
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex flex-col items-center justify-center p-4"
+            <motion.div
+              className="flex sm:space-x-2 md:space-x-6"
+              animate={{ x: ["0%", "-200%"] }}
+              transition={{
+                duration: 60,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {[...clients, ...clients].map((client, index) => (
+                <CarouselItem
+                  key={`${client.name}-${index}`}
+                  className="basis-1/6"
                 >
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mb-2"
-                  />
-                  <p className="text-xs sm:text-sm md:text-base text-center mt-2">
-                    {client.name}
-                  </p>
-                </motion.div>
-              </CarouselItem>
-            ))}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{
+                      duration: 0.5,
+                      delay: (index % clients.length) * 0.1,
+                    }}
+                    className="flex flex-col items-center justify-center p-4"
+                  >
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mb-2"
+                    />
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </motion.div>
           </CarouselContent>
-          <div className="hidden sm:block">
-            <CarouselPrevious className="absolute -left-12 top-1/2 transform -translate-y-1/2" />
-            <CarouselNext className="absolute -right-12 top-1/2 transform -translate-y-1/2" />
-          </div>
         </Carousel>
       </div>
     </section>

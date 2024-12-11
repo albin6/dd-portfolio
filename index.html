@@ -4,7 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/dates-doha.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DD</title>
+    <title>
+      Dates Doha Contracting WLL – Redefining Excellence in Contracting &
+      Trading
+    </title>
+    <!-- public/index.html -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Function to create a scrolling effect
+      let titleText =
+        " Dates Doha Contracting WLL – Redefining Excellence in Contracting & Trading ";
+      let index = 0;
+
+      function scrollTitle() {
+        document.title =
+          titleText.substring(index) + titleText.substring(0, index);
+        index = (index + 1) % titleText.length; // Loop back when the end is reached
+      }
+
+      setInterval(scrollTitle, 200); // Adjust the speed here (200ms)
+    </script>
   </head>
   <body>
     <div id="root"></div>

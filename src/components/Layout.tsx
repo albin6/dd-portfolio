@@ -24,6 +24,8 @@ import {
 } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import ContactFormModal from "./ContactFormModal";
+import MapComponent from "./map/MapComponent";
+import ContactForm from "./ContactForm";
 
 const navItems = [
   { name: "Home", href: "#" },
@@ -34,6 +36,7 @@ const navItems = [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
@@ -56,6 +59,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
     }
   };
 
+  useEffect(() => {
+    const handleClose = () => setIsOpen(false);
+    document.addEventListener("closeSheet", handleClose);
+    return () => document.removeEventListener("closeSheet", handleClose);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <header
@@ -73,15 +82,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <img src="/dates-doha.png" width={"150px"} alt="" />
             </Link>
           </motion.div>
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-lg font-medium transition-colors ${
                   isScrolled
-                    ? "text-foreground hover:text-primary"
-                    : "text-gray-950 hover:text-primary-foreground"
+                    ? "text-foreground hover:text-gray-700"
+                    : "text-gray-950 hover:text-gray-700"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -97,7 +106,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             ))}
           </div>
           <div className="md:hidden">
-            <Sheet>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
@@ -116,19 +125,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </SheetHeader>
                 <div className="mt-6 flex flex-col space-y-4">
                   {navItems.map((item) => (
-                    <Link
+                    <motion.a
                       key={item.name}
-                      to={item.href}
-                      className="text-sm font-medium hover:text-primary transition-colors"
+                      href={item.href}
+                      className={`text-sm font-medium transition-colors ${
+                        isScrolled
+                          ? "text-foreground hover:text-gray-700"
+                          : "text-gray-950 hover:text-gray-700"
+                      }`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       onClick={(e) => {
                         if (item.isModal) {
                           e.preventDefault();
                           handleNavItemClick(item);
                         }
+                        document.dispatchEvent(new CustomEvent("closeSheet"));
                       }}
                     >
                       {item.name}
-                    </Link>
+                    </motion.a>
                   ))}
                 </div>
               </SheetContent>
@@ -139,42 +155,49 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-grow">{children}</main>
       <footer className="bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                {navItems.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="hover:underline transition-all"
-                      onClick={(e) => {
-                        if (item.isModal) {
-                          e.preventDefault();
-                          handleNavItemClick(item);
-                        }
-                      }}
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">Follow Us</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="hover:text-primary transition-colors">
-                  <Facebook className="h-6 w-6" />
-                </a>
-                <a href="#" className="hover:text-primary transition-colors">
-                  <Twitter className="h-6 w-6" />
-                </a>
-                <a href="#" className="hover:text-primary transition-colors">
-                  <LinkedIn className="h-6 w-6" />
-                </a>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] gap-11">
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+                <ul className="flex space-x-4">
+                  {navItems.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="hover:underline transition-all"
+                        onClick={(e) => {
+                          if (item.isModal) {
+                            e.preventDefault();
+                            handleNavItemClick(item);
+                          }
+                        }}
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold text-lg mb-4">Follow Us</h3>
+                <div className="flex space-x-4">
+                  <a href="#" className="hover:text-primary transition-colors">
+                    <Facebook className="h-6 w-6" />
+                  </a>
+                  <a href="#" className="hover:text-primary transition-colors">
+                    <Twitter className="h-6 w-6" />
+                  </a>
+                  <a href="#" className="hover:text-primary transition-colors">
+                    <LinkedIn className="h-6 w-6" />
+                  </a>
+                </div>
               </div>
             </div>
+            <div className="rounded-lg overflow-hidden md:col-span-1">
+              {/* Pass coordinates for the location */}
+              <MapComponent />
+            </div>
+            <ContactForm title="Contact Us" />
           </div>
           <div className="mt-8 pt-8 border-t border-secondary-foreground/10 text-center">
             <p>&copy; 2024 ForeignIndustry. All rights reserved.</p>
@@ -184,10 +207,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <Dialog open={isContactModalOpen} onOpenChange={setIsContactModalOpen}>
         <DialogContent className="w-[90%] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1200px]">
           <DialogHeader>
-            <DialogTitle className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+            <DialogTitle className="text-xl sm:text-lg md:text-xl lg:text-2xl">
               Contact Us
             </DialogTitle>
-            <DialogDescription className="text-sm sm:text-base md:text-lg lg:text-xl">
+            <DialogDescription className="text-sm sm:text-base md:text-sm lg:text-lg">
               Fill out the form below and we'll get back to you as soon as
               possible.
             </DialogDescription>

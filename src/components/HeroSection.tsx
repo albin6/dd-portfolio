@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function HeroSection() {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-[50vh] lg:min-h-[90vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -57,29 +58,19 @@ export function HeroSection() {
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             <Button
+              onClick={() => navigate("#contact")}
               size="lg"
               className="w-full sm:w-auto text-base sm:text-lg"
-              asChild
             >
-              <Link
-                to={"#contact"}
-                className="inline-flex items-center justify-center"
-              >
-                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              Contact Us <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
+              onClick={() => navigate("#clients")}
               size="lg"
               className="w-full sm:w-auto text-base sm:text-lg text-gray-950"
               variant="outline"
-              asChild
             >
-              <Link
-                to={"#clients"}
-                className="inline-flex items-center justify-center"
-              >
-                View Our Clients
-              </Link>
+              View Our Clients
             </Button>
           </motion.div>
         </motion.div>
