@@ -29,7 +29,7 @@ import ContactForm from "./ContactForm";
 
 const navItems = [
   { name: "Home", href: "#" },
-  { name: "About Us", href: "#about" },
+  { name: "About Us", href: "#about-us" },
   { name: "Clients", href: "#clients" },
   { name: "Services", href: "#services" },
   { name: "Contact Us", href: "#contact", isModal: true },
