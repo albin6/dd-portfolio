@@ -11,28 +11,28 @@ import {
 } from "@/components/ui/carousel";
 
 const clients = [
-  { name: "Qatar Armed Forces", logo: "src/assets/clients/QAF-client.jpeg" },
+  { name: "Qatar Armed Forces", logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898907/banner-xyz_obylp9.jpg" },
   {
     name: "Qatar Volleyball Federation (QVA)",
-    logo: "src/assets/clients/QVA-client.jpeg",
+    logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898891/QVA-client_zk8bqr.jpg",
   },
-  { name: "Mannai Corporation", logo: "src/assets/clients/Mannai-client.jpeg" },
+  { name: "Mannai Corporation", logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898890/Mannai-client_hypehd.jpg" },
   {
     name: "National Car Company",
-    logo: "src/assets/clients/National-Cars-Company.jpeg",
+    logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898891/National-Cars-Company_zgd0hh.jpg",
   },
   {
     name: "Al Bidaa Dental Center",
-    logo: "src/assets/clients/Al-Bidaa-Dental-Client.png",
+    logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898889/Al-Bidaa-Dental-Client_qr7zpf.png",
   },
   {
     name: "One Thousand walls WLL",
-    logo: "src/assets/clients/One-Thousand-Wall-Client.jpeg",
+    logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898891/One-Thousand-Wall-Client_nsqgui.jpg",
   },
-  { name: "Hotpack WLL", logo: "src/assets/clients/Hot-Pack-Client.png" },
+  { name: "Hotpack WLL", logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898889/Hot-Pack-Client_zgn9wy.png" },
   {
     name: "Flowtech Hydraulic Trading",
-    logo: "src/assets/clients/Flow-Tech-Client.jpg",
+    logo: "https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898890/Flow-Tech-Client_ipbcmn.jpg",
   },
 ];
 

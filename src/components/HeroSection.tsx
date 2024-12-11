@@ -11,7 +11,7 @@ export function HeroSection() {
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-          src="src/assets/banners/banner-xyz.jpg"
+          src="https://res.cloudinary.com/dkph7vdgg/image/upload/v1733898907/banner-xyz_obylp9.jpg"
           alt="Industrial background"
           className="w-full h-full object-cover"
         />
