@@ -5,7 +5,7 @@ import { Send } from "lucide-react";
 
 export default function ContactForm({ title = "Send us a message" }) {
   return (
-    <div className="col-span-2">
+    <div className="col-span-2 md:col-span-1">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">{title}</h2>
       <form className="space-y-4">
         <div>

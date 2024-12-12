@@ -64,7 +64,7 @@ export function ServicesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full flex flex-col hover:bg-gray-300 hover:scale-105 transition-transform duration-300 ease-in-out">
+              <Card className="h-full flex flex-col hover:bg-sky-200 hover:scale-105 transition-transform duration-300 ease-in-out">
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
