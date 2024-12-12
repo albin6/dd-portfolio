@@ -22,7 +22,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ContactFormModal from "./ContactFormModal";
 import MapComponent from "./map/MapComponent";
 import ContactForm from "./ContactForm";
@@ -36,6 +36,7 @@ const navItems = [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -86,7 +87,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
-                href={item.href}
+                href={location.pathname == "/about-us" ? "/" : item.href}
                 className={`text-lg font-medium transition-colors ${
                   isScrolled
                     ? "text-foreground hover:text-gray-700"
