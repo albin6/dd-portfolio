@@ -48,8 +48,9 @@ export default function AboutUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
+                key={item.title}
               >
-                <Card key={item.title}>
+                <Card>
                   <CardHeader>
                     <CardTitle className="text-2xl font-semibold text-primary"></CardTitle>
                   </CardHeader>

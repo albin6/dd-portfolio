@@ -10,10 +10,8 @@ import {
 import { DialogHeader } from "./ui/dialog";
 import ContactFormModal from "./ContactFormModal";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 export function HeroSection() {
-  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -74,18 +72,16 @@ export function HeroSection() {
               <Button
                 onClick={() => setIsOpen(true)}
                 size="lg"
-                className="w-full sm:w-auto text-base sm:text-lg"
+                className="w-full text-center sm:w-auto text-base sm:text-lg"
               >
-                Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+                Contact Us <ArrowRight className="ml-2 h-5 w-4" />
               </Button>
-              <Button
-                onClick={() => navigate("#clients")}
-                size="lg"
-                className="w-full sm:w-auto text-base sm:text-lg text-gray-950"
-                variant="outline"
+              <a
+                href="#clients"
+                className="w-full px-5 text-center py-2 rounded bg-white sm:w-auto text-base text-gray-950"
               >
                 View Our Clients
-              </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
