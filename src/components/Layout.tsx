@@ -160,7 +160,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div className="space-y-4">
               <div>
                 <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-                <ul className="space-y-4 md:flex md:space-x-4">
+                <ul className="space-y-4 md:space-y-0 md:flex md:space-x-4">
                   {navItems.map((item) => (
                     <li key={item.name}>
                       <a
