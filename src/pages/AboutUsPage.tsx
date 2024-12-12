@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
-import { Building2, Users } from "lucide-react";
+import { Building2, Gem, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function AboutUsPage() {
@@ -126,6 +126,7 @@ export default function AboutUsPage() {
                     variant="secondary"
                     className="text-sm py-4 justify-center"
                   >
+                    <Gem className="h-6 w-6 text-sky-600 mr-2 flex-shrink-0" />
                     {specialization}
                   </Badge>
                 ))}
