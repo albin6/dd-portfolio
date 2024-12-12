@@ -34,16 +34,29 @@ export default function AboutUsPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="sm:text-sm text-gray-600 mb-4">
-                    Dates Doha Contracting WLL has built a reputation for
-                    exceeding client expectations in every project we undertake.
-                    Our commitment to excellence and innovation drives us to
-                    deliver top-notch services across Qatar.
+                  <p className="text-gray-600 mb-4">
+                    Contracting WLLDates Doha Contracting WLL is a leading
+                    contracting and trading company in Qatar, renowned for
+                    delivering top-notch services in interior contracting, MeP
+                    contracting, and trading. With a commitment to excellence
+                    and innovation, we have built a reputation for exceeding
+                    client expectations in every project we undertake.
                   </p>
                   <p className="text-gray-600">
-                    Guided by the vision of our Chairman, Yusuf Ahamed Kano, and
-                    the leadership of our Managing Director, Jabir Choori Azeez,
-                    we continue to set new standards in the industry.
+                    Our portfolio includes collaborations with prestigious
+                    clients such as the Qatar Armed Forces, Qatar
+                    Telecommunications Department, Qatar Volleyball Federation,
+                    National Car Company, and Mannai Corporation. These
+                    partnerships are a testament to our dedication to quality
+                    and our ability to deliver results that meet the highest
+                    standards.
+                  </p>
+                  <p className="text-gray-600">
+                    Guided by the vision of our Chairman,{" "}
+                    <b>Yusuf Ahamed Kano</b>, and the leadership of our Managing
+                    Director, <b>Jabir Choori Azeez</b>, Dates Doha Contracting
+                    WLL is your trusted partner for all your contracting and
+                    trading needs in Qatar.
                   </p>
                 </CardContent>
               </Card>
@@ -124,7 +137,7 @@ export default function AboutUsPage() {
                   <Badge
                     key={index}
                     variant="secondary"
-                    className="text-sm py-4 justify-center"
+                    className="text-sm py-4 pl-5 md:pl-10 justify-start"
                   >
                     <Gem className="h-6 w-6 text-sky-600 mr-2 flex-shrink-0" />
                     {specialization}

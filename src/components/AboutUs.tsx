@@ -1,5 +1,5 @@
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -25,7 +25,7 @@ export default function AboutUs() {
               {
                 title: "Expertise and Experience",
                 description:
-                  "Delivering unparalleled quality and reliability in every project we undertake.y",
+                  "Delivering unparalleled quality and reliability in every project we undertake.",
               },
               {
                 title: "Prestigious Clientele",
@@ -49,13 +49,11 @@ export default function AboutUs() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 key={item.title}
+                className="flex flex-col h-full"
               >
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-semibold text-primary"></CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-start">
+                <Card className="flex flex-col h-full">
+                  <CardContent className="flex flex-col h-full mt-6">
+                    <div className="flex items-start flex-grow">
                       <CheckCircle className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
                       <div>
                         <strong className="text-gray-800">{item.title}:</strong>

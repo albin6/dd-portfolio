@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  Menu,
-  Facebook,
-  Twitter,
-  LinkedinIcon as LinkedIn,
-} from "lucide-react";
+import { Mail, MapPin, Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -26,6 +21,7 @@ import { Link, useLocation } from "react-router-dom";
 import ContactFormModal from "./ContactFormModal";
 import MapComponent from "./map/MapComponent";
 import ContactForm from "./ContactForm";
+import { Card } from "@/components/ui/card";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -87,7 +83,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
-                href={location.pathname == "/about-us" ? "/" : item.href}
+                href={
+                  location.pathname == "/about-us"
+                    ? `/${item.href == "/" ? "" : item.href}`
+                    : item.href
+                }
                 className={`text-lg font-medium transition-colors ${
                   isScrolled
                     ? "text-foreground hover:text-gray-700"
@@ -156,45 +156,93 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-grow">{children}</main>
       <footer className="bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-[1fr_1.5fr_1fr] gap-11">
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-                <ul className="space-y-4 md:space-y-0 md:flex md:space-x-4">
-                  {navItems.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="hover:underline transition-all"
-                        onClick={(e) => {
-                          if (item.isModal) {
-                            e.preventDefault();
-                            handleNavItemClick(item);
-                          }
-                        }}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
-                  <a href="#" className="hover:text-primary transition-colors">
-                    <Facebook className="h-6 w-6" />
-                  </a>
-                  <a href="#" className="hover:text-primary transition-colors">
-                    <Twitter className="h-6 w-6" />
-                  </a>
-                  <a href="#" className="hover:text-primary transition-colors">
-                    <LinkedIn className="h-6 w-6" />
-                  </a>
+          <div className="grid grid-cols-2 xl:grid-cols-[1fr_1.5fr_1fr] gap-11">
+            <div className="hidden xl:block h-96 overflow-y-auto px-2 sm:px-2 md:px-3">
+              <div className="space-y-6">
+                {/* Title and Description */}
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    Get in Touch
+                  </h2>
+                  <p className="text-gray-600">
+                    We&apos;d love to hear from you. Please fill out this form
+                    and we&apos;ll get back to you as soon as possible.
+                  </p>
+                </div>
+
+                {/* Location Cards Section */}
+                <div className="space-y-4">
+                  {/* Qatar Card */}
+                  <Card className="p-4 shadow-sm">
+                    <h3 className="text-lg font-semibold mb-3">Qatar</h3>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <MapPin className="h-4 w-4" />
+                        <span className="text-sm">
+                          123 Doha Street, Doha, Qatar
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Phone className="h-4 w-4" />
+                        <span className="text-sm">+974 1234 5678</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Mail className="h-4 w-4" />
+                        <span className="text-sm">
+                          qatar@foreignindustry.com
+                        </span>
+                      </div>
+                    </div>
+                  </Card>
+
+                  {/* KSA Card */}
+                  <Card className="p-4 shadow-sm">
+                    <h3 className="text-lg font-semibold mb-3">KSA</h3>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <MapPin className="h-4 w-4" />
+                        <span className="text-sm">
+                          456 Riyadh Avenue, Riyadh, KSA
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Phone className="h-4 w-4" />
+                        <span className="text-sm">+966 9876 5432</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Mail className="h-4 w-4" />
+                        <span className="text-sm">ksa@foreignindustry.com</span>
+                      </div>
+                    </div>
+                  </Card>
+
+                  {/* Bahrain Card */}
+                  <Card className="p-4 shadow-sm">
+                    <h3 className="text-lg font-semibold mb-3">Bahrain</h3>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <MapPin className="h-4 w-4" />
+                        <span className="text-sm">
+                          789 Manama Road, Manama, Bahrain
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Phone className="h-4 w-4" />
+                        <span className="text-sm">+973 1122 3344</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Mail className="h-4 w-4" />
+                        <span className="text-sm">
+                          bahrain@foreignindustry.com
+                        </span>
+                      </div>
+                    </div>
+                  </Card>
                 </div>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden md:col-span-1">
+
+            <div className="rounded-lg overflow-hidden col-span-2 md:col-span-1">
               {/* Pass coordinates for the location */}
               <MapComponent />
             </div>

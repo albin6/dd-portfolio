@@ -44,25 +44,31 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              ForeignIndustry
-            </motion.h1>
-            <motion.p
-              className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 text-center sm:text-left"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
               Redefining Excellence in Contracting & Trading
-            </motion.p>
-            <motion.p
-              className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-center sm:text-left"
+            </motion.h1>
+
+            <motion.h1
+              className="text-lg  sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-4 text-center sm:text-left"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               We are a leading Contracting & Trading company specialized in
               Fit-out and FF&E solutions for complete turn-key projects.
-            </motion.p>
+            </motion.h1>
+
+            <motion.h2
+              className="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 sm:mb-6 text-center sm:text-left"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              Dates Doha Contracting WLL has built a reputation for exceeding
+              client expectations in every project we undertake. Our commitment
+              to excellence and innovation drives us to deliver top-notch
+              services across Qatar.
+            </motion.h2>
+
             <motion.div
               className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
               initial={{ opacity: 0, y: 20 }}
