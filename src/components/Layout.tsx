@@ -128,7 +128,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   {navItems.map((item) => (
                     <motion.a
                       key={item.name}
-                      href={item.href}
+                      href={
+                        location.pathname == "/about-us"
+                          ? `/${item.href == "/" ? "" : item.href}`
+                          : item.href
+                      }
                       className={`text-sm font-medium transition-colors ${
                         isScrolled
                           ? "text-foreground hover:text-gray-700"
