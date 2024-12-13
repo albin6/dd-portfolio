@@ -28,7 +28,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="h-4 w-4" />
-              <span className="text-sm">www.datesqatar.com</span>
+              <span className="text-sm">info@datesqatar.com</span>
             </div>
           </div>
         </Card>

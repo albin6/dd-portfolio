@@ -16,7 +16,7 @@ L.Marker.prototype.options.icon = customMarkerIcon;
 
 const MapComponent: React.FC = () => {
   const locations: { name: string; position: [number, number] }[] = [
-    { name: "Qatar", position: [25.3548, 51.1839] },
+    { name: "Qatar", position: [25.262548, 51.545146] },
     { name: "KSA (Saudi Arabia)", position: [23.8859, 45.0792] },
     { name: "Bahrain", position: [26.0667, 50.5577] },
   ];
