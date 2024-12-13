@@ -188,9 +188,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                           </span>
                         </div>
                         <span className="text-sm">P O Box: 10190</span>
-                        <span className="text-sm">
-                          Dates Doha Contracting WLL
-                        </span>
+                        <span className="text-sm">Doha, Qatar</span>
+
                         <span className="text-sm">Tel : +974 40179300</span>
                         <span className="text-sm">Fax: +974 40394564</span>
                         <span className="text-sm">Mob:+974 77048000</span>

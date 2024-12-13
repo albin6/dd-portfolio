@@ -24,7 +24,7 @@ export default function Contact() {
                 <span className="text-sm">Dates Doha Contracting WLL</span>
               </div>
               <span className="text-sm">P O Box: 10190</span>
-              <span className="text-sm">Dates Doha Contracting WLL</span>
+              <span className="text-sm">Doha, Qatar</span>
               <span className="text-sm">Tel : +974 40179300</span>
               <span className="text-sm">Fax: +974 40394564</span>
               <span className="text-sm">Mob:+974 77048000</span>
@@ -42,9 +42,7 @@ export default function Contact() {
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-gray-600">
               <MapPin className="h-4 w-4" />
-              <span className="text-sm">
-                Dammam, Kingdom of Saudi Arabia
-              </span>
+              <span className="text-sm">Dammam, Kingdom of Saudi Arabia</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Phone className="h-4 w-4" />
