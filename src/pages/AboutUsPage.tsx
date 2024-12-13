@@ -55,7 +55,7 @@ export default function AboutUsPage() {
                   <p className="text-gray-600">
                     Guided by the vision of our Chairman,{" "}
                     <b>Yousuf Ahamed Kano</b>, and the leadership of our
-                    Managing Director, <b>Jabir Choori Azeez</b>, Dates Doha
+                    Managing Director, <b>Jabir Choori Azeez</b> Dates Doha
                     Contracting WLL is your trusted partner for all your
                     contracting and trading needs in Qatar.
                   </p>
