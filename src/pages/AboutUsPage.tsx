@@ -95,7 +95,7 @@ export default function AboutUsPage() {
             </motion.div>
           </div>
           <motion.div
-            className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
+            className="relative h-[590px] max-w-[712px] rounded-lg overflow-hidden shadow-xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -104,7 +104,7 @@ export default function AboutUsPage() {
             <LazyLoadImage
               src="https://res.cloudinary.com/dkph7vdgg/image/upload/v1733922381/doha-city_c2kirz.jpg"
               alt="Dates Doha Contracting WLL Project"
-              className="transition-transform duration-1000 hover:scale-105 object-cover w-full h-full"
+              className="object-cover w-full h-full"
               effect="blur" // Optional: Blur effect while loading
             />
           </motion.div>
