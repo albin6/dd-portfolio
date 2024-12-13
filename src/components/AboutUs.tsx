@@ -8,7 +8,7 @@ export default function AboutUs() {
     <>
       <section
         id="services"
-        className="py-8 sm:py-12 md:py-16 lg:py-20 bg-secondary/10"
+        className="py-8 sm:py-12 md:py-16 lg:py-18 bg-secondary/10"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2

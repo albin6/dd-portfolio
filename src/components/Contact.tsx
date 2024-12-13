@@ -20,15 +20,15 @@ export default function Contact() {
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-gray-600">
               <MapPin className="h-4 w-4" />
-              <span className="text-sm">123 Doha Street, Doha, Qatar</span>
+              <span className="text-sm">Doha, Qatar</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Phone className="h-4 w-4" />
-              <span className="text-sm">+974 1234 5678</span>
+              <span className="text-sm">+974 4017 9300</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="h-4 w-4" />
-              <span className="text-sm">qatar@foreignindustry.com</span>
+              <span className="text-sm">www.datesqatar.com</span>
             </div>
           </div>
         </Card>
@@ -39,15 +39,15 @@ export default function Contact() {
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-gray-600">
               <MapPin className="h-4 w-4" />
-              <span className="text-sm">456 Riyadh Avenue, Riyadh, KSA</span>
+              <span className="text-sm">Dammam, Kingdom of Saudi Arabia (KSA)</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Phone className="h-4 w-4" />
-              <span className="text-sm">+966 9876 5432</span>
+              <span className="text-sm">+966 55819 8819</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="h-4 w-4" />
-              <span className="text-sm">ksa@foreignindustry.com</span>
+              <span className="text-sm">www.datesqatar.com</span>
             </div>
           </div>
         </Card>
@@ -58,15 +58,15 @@ export default function Contact() {
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-gray-600">
               <MapPin className="h-4 w-4" />
-              <span className="text-sm">789 Manama Road, Manama, Bahrain</span>
+              <span className="text-sm">Manama, Kingdom of Bahrain</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Phone className="h-4 w-4" />
-              <span className="text-sm">+973 1122 3344</span>
+              <span className="text-sm">+973 3449 1633</span>
             </div>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="h-4 w-4" />
-              <span className="text-sm">bahrain@foreignindustry.com</span>
+              <span className="text-sm">www.datesqatar.com</span>
             </div>
           </div>
         </Card>

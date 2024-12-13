@@ -133,6 +133,11 @@ export default function AboutUsPage() {
                   "Retail & High Street Retail",
                   "Restaurants & F&B",
                   "Automotive Showrooms",
+                  "Structural Engineering",
+                  "Interior Fit out",
+                  "MEP works",
+                  "HVAC works",
+                  "Landscaping",
                 ].map((specialization, index) => (
                   <Badge
                     key={index}

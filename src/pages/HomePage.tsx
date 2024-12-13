@@ -19,8 +19,8 @@ export function HomePage() {
     <>
       <HeroSection />
       <ServicesSection />
-      <AboutUs />
       <ClientsSection />
+      <AboutUs />
     </>
   );
 }
