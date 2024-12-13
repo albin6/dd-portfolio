@@ -35,12 +35,13 @@ export default function AboutUsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    Contracting WLLDates Doha Contracting WLL is a leading
-                    contracting and trading company in Qatar, renowned for
-                    delivering top-notch services in interior contracting, MeP
-                    contracting, and trading. With a commitment to excellence
-                    and innovation, we have built a reputation for exceeding
-                    client expectations in every project we undertake.
+                    Dates Doha Contrating W.L.L is a leading Contracting &
+                    Trading company specialized in Fit-out and FF&E solutions
+                    for complete turn-key projects. Over the years we have
+                    proven high commitment to delivering high-end solutions to
+                    many sectors in Qatar. With a commitment to excellence and
+                    innovation, we have built a reputation for exceeding client
+                    expectations in every project we undertake.
                   </p>
                   <p className="text-gray-600">
                     Our portfolio includes collaborations with prestigious
@@ -53,10 +54,10 @@ export default function AboutUsPage() {
                   </p>
                   <p className="text-gray-600">
                     Guided by the vision of our Chairman,{" "}
-                    <b>Yusuf Ahamed Kano</b>, and the leadership of our Managing
-                    Director, <b>Jabir Choori Azeez</b>, Dates Doha Contracting
-                    WLL is your trusted partner for all your contracting and
-                    trading needs in Qatar.
+                    <b>Yousuf Ahamed Kano</b>, and the leadership of our
+                    Managing Director, <b>Jabir Choori Azeez</b>, Dates Doha
+                    Contracting WLL is your trusted partner for all your
+                    contracting and trading needs in Qatar.
                   </p>
                 </CardContent>
               </Card>

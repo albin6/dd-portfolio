@@ -76,7 +76,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             transition={{ duration: 0.5 }}
           >
             <Link to="/" className="text-2xl font-bold">
-              <img src="/dates-doha.png" width={"170px"} alt="" />
+              <img src="/Dates-Doha-Logo.png" width={"170px"} alt="" />
             </Link>
           </motion.div>
           <div className="hidden md:flex space-x-6">
@@ -180,17 +180,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Card className="p-4 shadow-sm">
                     <h3 className="text-lg font-semibold mb-3">Qatar</h3>
                     <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <MapPin className="h-4 w-4" />
+                      <div className="flex flex-col justify-center gap-2 text-gray-600">
+                        <div className="flex space-x-2">
+                          <MapPin className="h-4 w-4" />
+                          <span className="text-sm">
+                            Dates Doha Contracting WLL
+                          </span>
+                        </div>
+                        <span className="text-sm">P O Box: 10190</span>
                         <span className="text-sm">Doha, Qatar</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <Phone className="h-4 w-4" />
-                        <span className="text-sm">+974 4017 9300</span>
+                        <span className="text-sm">
+                          Dates Doha Contracting WLL
+                        </span>
+                        <span className="text-sm">Tel : +974 40179300</span>
+                        <span className="text-sm">Fax: +974 40394564</span>
+                        <span className="text-sm">Mob:+974 77048000</span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-600">
                         <Mail className="h-4 w-4" />
-                        <span className="text-sm">www.datesqatar.com</span>
+                        <span className="text-sm">info@datesqatar.com</span>
                       </div>
                     </div>
                   </Card>
@@ -211,7 +219,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                       </div>
                       <div className="flex items-center gap-2 text-gray-600">
                         <Mail className="h-4 w-4" />
-                        <span className="text-sm">www.datesqatar.com</span>
+                        <span className="text-sm">info@datesqatar.com</span>
                       </div>
                     </div>
                   </Card>
@@ -232,7 +240,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                       </div>
                       <div className="flex items-center gap-2 text-gray-600">
                         <Mail className="h-4 w-4" />
-                        <span className="text-sm">www.datesqatar.com</span>
+                        <span className="text-sm">info@datesqatar.com</span>
                       </div>
                     </div>
                   </Card>
@@ -247,7 +255,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <ContactForm title="Contact Us" />
           </div>
           <div className="mt-8 pt-8 border-t border-secondary-foreground/10 text-center">
-            <p>&copy; 2024 ForeignIndustry. All rights reserved.</p>
+            <p>&copy; Dates Qatar. All rights reserved.</p>
           </div>
         </div>
       </footer>
