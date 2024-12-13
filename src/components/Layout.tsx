@@ -188,7 +188,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                           </span>
                         </div>
                         <span className="text-sm">P O Box: 10190</span>
-                        <span className="text-sm">Doha, Qatar</span>
                         <span className="text-sm">
                           Dates Doha Contracting WLL
                         </span>
@@ -210,7 +209,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                       <div className="flex items-center gap-2 text-gray-600">
                         <MapPin className="h-4 w-4" />
                         <span className="text-sm">
-                          Dammam, Kingdom of Saudi Arabia (KSA)
+                          Dammam, Kingdom of Saudi Arabia
                         </span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-600">
