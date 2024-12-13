@@ -76,7 +76,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             transition={{ duration: 0.5 }}
           >
             <Link to="/" className="text-2xl font-bold">
-              <img src="/Dates-Doha-Logo.png" width={"170px"} alt="" />
+              <img src="/Dates-Doha-Logo.png" width={"180px"} alt="" />
             </Link>
           </motion.div>
           <div className="hidden md:flex space-x-6">
